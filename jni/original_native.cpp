@@ -43,7 +43,6 @@ GLuint loadShader(GLenum shaderType, const char* pSource) {
     return shader;
 }
 
-
 GLuint createProgram(const char* pVertexSource, const char* pFragmentSource) {
     GLuint vertexShader = loadShader(GL_VERTEX_SHADER, pVertexSource);
     GLuint pixelShader = loadShader(GL_FRAGMENT_SHADER, pFragmentSource);
@@ -98,7 +97,6 @@ int init(engine* e) {
 
 }
 
-// •`‰æ
 void draw(engine* e) {
     GLuint gProgram = createProgram(gVertexShader, gFragmentShader);
     GLuint gvPositionHandle = glGetAttribLocation(gProgram, "vPosition");
@@ -118,7 +116,6 @@ void draw(engine* e) {
 
 	eglSwapBuffers(e->display, e->surface);
 }
-
 
 void android_main(android_app* state) {
 	app_dummy();

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nz.kapsy.jni_gl2_test"
+    package="nz.kapsy.original_native"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="0.2" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -24,7 +24,7 @@
 			android:launchMode="singleTask">
                 
 	        <meta-data android:name="android.app.lib_name"
-	        android:value="jni_gl2_test" />
+	        android:value="original_native" />
 	        
 			<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
