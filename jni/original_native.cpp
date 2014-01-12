@@ -6,7 +6,7 @@
 #include <android/log.h>
 #include <android_native_app_glue.h>
 
-#define LOG_TAG ("gles2ndtest")
+#define LOG_TAG ("original_native")
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO,  LOG_TAG, __VA_ARGS__))
 #define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN,  LOG_TAG, __VA_ARGS__))
@@ -19,20 +19,17 @@ struct engine {
 	EGLSurface surface;
 };
 
-
 const char gVertexShader[] =
     "attribute vec4 vPosition;\n"
     "void main() {\n"
     "  gl_Position = vPosition;\n"
     "}\n";
 
-
 const char gFragmentShader[] =
     "precision mediump float;\n"
     "void main() {\n"
     "  gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);\n"
     "}\n";
-
 
 GLuint loadShader(GLenum shaderType, const char* pSource) {
     GLuint shader = glCreateShader(shaderType);
